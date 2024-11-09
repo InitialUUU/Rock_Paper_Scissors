@@ -3,19 +3,19 @@ let scissors=document.getElementById("scissors");
 let rock=document.getElementById("rock");
 let paper=document.getElementById("paper");
 let score=document.getElementById("score");
-let user_score=document.getElementById("user_score");
-let computer_score=document.getElementById("computer_score");
+let userscoreElement=document.getElementById("user_score");
+let computerscoreElement=document.getElementById("computer_score");
 let reset_bin=document.getElementById("reset_btn");
 let end_btn=document.getElementById("end_btn");
 
 let imgArray=new Array();
-imgArray[0]="paper.png";
-imgArray[1]="rock.png";
-imgArray[2]="scissors.png";
+imgArray[0]="img/paper.png";
+imgArray[1]="img/rock.png";
+imgArray[2]="img/scissors.png";
 
 let a;
-user_score=0;
-computer_score=0;
+let userscore=0;
+let computerscore=0;
 
 function imagetime()
 {
@@ -31,7 +31,7 @@ scissors.onclick = ()=>{
     {
         alert("승리");
         userscore++;
-        user_score.textContent=userscore;
+        userscoreElement.textContent=userscore;
     }
     else if(a==2) //비김(컴퓨터:가위)
     {
@@ -41,7 +41,7 @@ scissors.onclick = ()=>{
     {
         alert("패배");
         computerscore++;
-        computer_score.textContent=computerscore;
+        computerscoreElement.textContent=computerscore;
     }
 }
 
@@ -52,7 +52,7 @@ rock.onclick = ()=>{
     {
         alert("승리");
         userscore++;
-        user_score.textContent=userscore;
+        userscoreElement.textContent=userscore;
     }
     else if(a==1) //비김(컴퓨터:묵)
     {
@@ -62,7 +62,7 @@ rock.onclick = ()=>{
     {
         alert("패배");
         computerscore++;
-        computer_score.textContent=computerscore;
+        computerscoreElement.textContent=computerscore;
     }
 }
 
@@ -73,7 +73,7 @@ paper.onclick = ()=>{
     {
         alert("승리");
         userscore++;
-        user_score.textContent=userscore;
+        userscoreElement.textContent=userscore;
     }
     else if(a==0) //비김(컴퓨터:보)
     {
@@ -83,7 +83,7 @@ paper.onclick = ()=>{
     {
         alert("패배")
         computerscore++;
-        computer_score.textContent=computerscore;
+        computerscoreElement.textContent=computerscore;
     }
 }
 
